@@ -19,6 +19,7 @@
     border-radius: 5px;
     height: 5vh;
     width: 70%;
+    padding-left: 10px;
 }
 
 #addBtn{
@@ -43,10 +44,12 @@ hr{
     display: flex;
     border-radius: 5px;
     margin-bottom: 3%;
+    justify-content: space-between;
+
 }
 
 #itemCon p {
-    margin-left: 20%;
+    /* margin-left: 20%; */
 }
 
 #itemCon img {
@@ -54,4 +57,5 @@ hr{
     height: 5%;
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 10px;
 }

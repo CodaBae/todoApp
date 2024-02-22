@@ -4,15 +4,14 @@ import TodoItem from "./TodoItem";
 
 function Container(props) {
 
-  console.log(props.loading)
   return (
     <div id="container">
       <Header />
-      <Input />
+      <Input setTrigger={props.setTrigger} />
       <hr />
       <div>
         {props.loading ? <p style={{textAlign: 'center', padding:'5%'}}>loading...</p> : props.todoItems.map((item, index) => {
-         return <TodoItem name={item.name} />;
+         return <TodoItem setTrigger={props.setTrigger}  name={item.name} id={item._id} />;
         }) }
       </div>
     </div>

@@ -9,8 +9,9 @@ function App() {
 
   const [todoItems, setTodoItems] = useState([])
   const [loading, setLoading] = useState(false)
+  const [trigger, setTrigger] = useState(false)
 
-  const getTaskAPI = 'https://adventurous-puce-cummerbund.cyclic.app/get_task'
+  const getTaskAPI = `${process.env.REACT_APP_APIURL}/get_task`
 
   useEffect(()=>{
     setLoading(true)
@@ -20,17 +21,16 @@ function App() {
       if (data){
         setLoading(false)
       }
-      setTodoItems(data.data)
+      setTodoItems(data.data.reverse())
    } 
    getTask()
 
-  },[])
+  },[trigger])
 
   return (
     <div className="App">
-      <Container  loading={loading} todoItems={todoItems}/>
+      <Container  loading={loading} todoItems={todoItems} setTrigger={setTrigger}/>
     </div>
   );
 }
-
 export default App;
