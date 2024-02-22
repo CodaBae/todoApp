@@ -22,7 +22,7 @@
 }
 
 #addBtn{
-
+ width: 10%;
 }
 
 #inputDiv{
@@ -36,4 +36,22 @@ hr{
     border: none;
     background: rgba(103, 102, 102, 0.23);
     height: 1px;
+}
+
+#itemCon{
+    background: #DBE2EF;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+
+#itemCon p {
+    margin-left: 20%;
+}
+
+#itemCon img {
+    width: 5%;
+    height: 5%;
+    margin-top: 10px;
+    margin-left: 10px;
 }

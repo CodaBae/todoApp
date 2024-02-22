@@ -1,10 +1,11 @@
 import CheckIcon from '../assets/icon/Check.png'
 
-function TodoItem () {
+function TodoItem (props) {
+
     return(
-        <div>
-            <img src={CheckIcon} />
-            <p>some task</p>
+        <div id='itemCon'>
+            <img src={CheckIcon} alt='check' />
+            <p>{props.name}</p>
         </div>
     )
 }

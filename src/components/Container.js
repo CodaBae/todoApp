@@ -2,15 +2,19 @@ import Header from "./Header";
 import Input from "./Input";
 import TodoItem from "./TodoItem";
 
-function Container() {
+function Container(props) {
+
+  console.log(props.loading)
   return (
-    <div id='container'>
+    <div id="container">
       <Header />
       <Input />
-
       <hr />
-
-      <TodoItem />
+      <div>
+        {props.loading ? <p style={{textAlign: 'center', padding:'5%'}}>loading...</p> : props.todoItems.map((item, index) => {
+         return <TodoItem name={item.name} />;
+        }) }
+      </div>
     </div>
   );
 }
